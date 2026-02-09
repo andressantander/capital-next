@@ -58,7 +58,7 @@ class="fixed top-0 w-full z-50 transition-all duration-300"
                     </a>
                     <!-- Open Account Button - Solid Green Style -->
                     <a href="#" 
-                       class="px-6 py-2.5 rounded-full font-bold uppercase text-[13px] tracking-wide transition-all duration-300 bg-secondary text-white hover:bg-green-600 shadow-md hover:shadow-lg">
+                       class="px-6 py-2.5 rounded-full font-bold uppercase text-[13px] tracking-wide transition-all duration-300 bg-secondary text-white hover:bg-[#1e7e3e] shadow-md hover:shadow-lg">
                         Abrir cuenta
                     </a>
                 </div>
@@ -86,7 +86,7 @@ class="fixed top-0 w-full z-50 transition-all duration-300"
          x-transition:leave="transition ease-in duration-150"
          x-transition:leave-start="opacity-100 translate-y-0"
          x-transition:leave-end="opacity-0 -translate-y-2"
-         class="md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl">
+         class="md:hidden fixed inset-0 z-40 w-screen h-screen bg-white pt-24 overflow-y-auto">
          
          <div class="pt-2 pb-6 space-y-1 px-4">
             @foreach([

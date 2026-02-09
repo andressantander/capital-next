@@ -18,13 +18,13 @@ export default {
                 heading: ['Poppins', 'Inter', ...defaultTheme.fontFamily.sans],
             },
             colors: {
-                primary: '#111827', // Deep Charcoal/Black
-                secondary: '#22C55E', // Vibrant Financial Green
-                accent: '#F5B700', // Gold (kept for contrast)
-                'bg-light': '#F9FAFB', // Very light gray
-                'bg-dark': '#0F172A', // Slate 900
-                'text-primary': '#111827',
-                'text-secondary': '#4B5563',
+                primary: '#1A232A', // FBS "Mirage" (Dark Blue-Grey)
+                secondary: '#26914A', // FBS "Eucalyptus" (Primary Green)
+                accent: '#79F4A4', // FBS "Mint" (Accent Green)
+                'bg-light': '#F9FAFB', // Very light gray (Keep for light sections)
+                'bg-dark': '#0F172A', // Slate 900 (Keep as deep dark alternative)
+                'text-primary': '#1A232A', // Match primary
+                'text-secondary': '#4B5563', // Gray 600
             },
         },
     },

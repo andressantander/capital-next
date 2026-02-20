@@ -10,13 +10,15 @@
     .animate-fade-in-up {
         animation: fadeInUp 0.8s ease-out forwards;
     }
-    
+
     .delay-100 {
         animation-delay: 0.1s;
     }
+
     .delay-200 {
         animation-delay: 0.2s;
     }
+
     .delay-300 {
         animation-delay: 0.3s;
     }
@@ -27,8 +29,44 @@
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* FORCE VISIBILITY FIX - Forzar visibilidad del contenido de la pantalla del teléfono */
+.group>div>div>div[class*="bg-black"]>div[class*="bg-"][class*="fefefe"],
+.group>div>div>div[class*="bg-black"]>div[class*="bg-"][class*="fefefe"]>*,
+.group>div>div>div[class*="bg-black"]>div[class*="bg-"][class*="fefefe"]>*>*,
+.group>div>div>div[class*="bg-black"]>div[class*="bg-"][class*="fefefe"]>*>*>* {
+    opacity: 1 !important;
+    visibility: visible !important;
+    /* Firefox 3D Fix */
+    backface-visibility: hidden !important;
+    -webkit-backface-visibility: hidden !important;
+    transform-style: preserve-3d !important;
+}
+
+.phone-screen-card,
+.phone-screen-card>*,
+.phone-screen-card>*>* {
+    opacity: 1 !important;
+    visibility: visible !important;
+    /* Firefox 3D Fix */
+    backface-visibility: hidden !important;
+    transform: translateZ(1px);
+    /* Forzar capa propia */
+}
+
+/* Firefox specific fixes for 3D transforms */
+@-moz-document url-prefix() {
+    .preserve-3d {
+        transform-style: preserve-3d;
+    }
+
+    .group:hover .preserve-3d {
+        will-change: transform;
     }
 }

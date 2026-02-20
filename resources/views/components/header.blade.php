@@ -86,7 +86,28 @@ class="fixed top-0 w-full z-50 transition-all duration-300"
          x-transition:leave="transition ease-in duration-150"
          x-transition:leave-start="opacity-100 translate-y-0"
          x-transition:leave-end="opacity-0 -translate-y-2"
-         class="md:hidden fixed inset-0 z-40 w-screen h-screen bg-white pt-24 overflow-y-auto">
+         class="md:hidden fixed inset-0 z-40 w-screen h-screen bg-white overflow-y-auto">
+         
+         <!-- Mobile Menu Header -->
+         <div class="flex justify-between items-center px-4 py-6 border-b border-gray-100">
+             <!-- Logo -->
+             <a href="{{ route('home') }}" class="flex items-center gap-2">
+                 <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center font-bold font-heading text-white">
+                     CN
+                 </div>
+                 <span class="font-heading font-bold text-2xl tracking-tight text-primary">
+                     Capital Next
+                 </span>
+             </a>
+             
+             <!-- Close Button -->
+             <button @click="mobileOpen = false" 
+                     class="inline-flex items-center justify-center p-2 rounded-md text-primary hover:bg-gray-100 focus:outline-none transition-colors duration-300">
+                 <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                 </svg>
+             </button>
+         </div>
          
          <div class="pt-2 pb-6 space-y-1 px-4">
             @foreach([
